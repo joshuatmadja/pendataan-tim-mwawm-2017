@@ -216,7 +216,7 @@
 			</div>
 			<div class="row">
 					<div class="col s12">
-						<h5>Last but not least...</h5>
+						<h5>Last but not least, siapakah Anda?</h5>
 					</div>
 						<div class="input-field col s12 m12">
 							<textarea placeholder="Tuliskan jabatan Anda di tim MWAWM 2017. Misalkan PJS MWAWM 2017, Ketua Departemen Media, Sekretaris Jendral, Staf Divisi Relasi TPB, dst." required aria-required="true" class="materialize-textarea" id="jabatan" name="jabatan"></textarea>
@@ -241,6 +241,9 @@
 <div class="modal modal-fixed-footer" id="review-modal">
 <div class="modal-content" id="isi-modal">
 		<h4>Konfirmasi Data</h4>
+
+		<span class="subtitle"><b>Anda adalah <span id="jabatan-review"></span></b></span><br>
+		<hr>
 		<h5>Identitas Diri</h5>
 		<span><strong>Nama: </strong></span><span id="nama-review"></span><br>
 		<span><strong>NIM: </strong></span><span id="nim-review"></span><br>
@@ -253,7 +256,7 @@
 		<span><strong>Alamat:</strong></span><div id="alamat-review"></div><br>
 		<span><strong>Kendaraan:</strong></span><div id="kendaraan-review"></div><br>
 		<span><strong>Penyakit dan/atau kelainan:</strong></span><div id="penyakit-review"></div><br>
-		
+		<hr>
 		<h5>Hasil Tes</h5>
 		<span><strong>MBTI: </strong></span><span id="mbti-review"></span><br>
 		<span><strong>Talentoday.com</strong></span><br>
@@ -277,9 +280,6 @@
 		<span class="manage"><strong>Ambition: </strong></span><span id="e_2-review"></span><br>
 		<span class="manage"><strong>Work ethics: </strong></span><span id="e_3-review"></span><br>
 		<span class="manage"><strong>Competitive spirit: </strong></span><span id="e_4-review"></span><br>
-		
-		
-		<h5>Anda adalah <span id="jabatan-review"></span></h5>
 	</div>
 	<div class="modal-footer">
 		<button class="btn-flat waves-effects waves-ripple" id="real-submit-button">Kirim</button>
