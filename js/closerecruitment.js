@@ -165,26 +165,6 @@ $(function(){
       valid = false;
     }
 
-    var ttoday=true;
-    for (var i = 1; i<=4; ++i){
-      if($('#d_'+i).val()==""){
-        valid=false; ttoday=false;
-      }
-      if($('#c_'+i).val()==""){
-        valid=false; ttoday=false;
-      }
-      if($('#a_'+i).val()==""){
-        valid=false; ttoday=false;
-      }
-      if($('#m_'+i).val()==""){
-        valid=false; ttoday=false;
-      }
-      if($('#e_'+i).val()==""){
-        valid=false; ttoday=false;
-      }
-    }
-    if(!ttoday) parent.find('ol').append('<li>Hasil Talentoday.com Anda</li>');
-    //if($('#tempatLahir').val()=="") return false;
 
     if($('#jabatan').val()==""){
       parent.find('ol').append('<li>Jabatan Anda</li>');
@@ -231,15 +211,6 @@ $(function(){
 	  //MBTI
 	  $('#mbti-review').html($('#mbti').val());
 	  
-	  //talentoday.com
-	  for (var i = 1; i<=4; ++i){
-		  $('#d_'+i+"-review").html($('#d_'+i).val());
-		  $('#c_'+i+"-review").html($('#c_'+i).val());
-		  $('#a_'+i+"-review").html($('#a_'+i).val());
-		  $('#m_'+i+"-review").html($('#m_'+i).val());
-		  $('#e_'+i+"-review").html($('#e_'+i).val());
-	  }
-	  
   }
 
   var formKey = "e/1FAIpQLSeqprEkjYE1oS5Wpi_sNvtZOD_tc1J-yPEZRjp3w411le5r2Q";
@@ -280,40 +251,7 @@ $(function(){
 	  
 	  MBTI: "entry.1086493230",
 	  
-	  communication:[
-		"entry.1814451636",
-		"entry.252883980",
-		"entry.2117960294",
-		"entry.44541694"
-	  ],
 	  
-	  manage:[
-		"entry.1624341122",
-		"entry.511211685",
-		"entry.1835363456",
-		"entry.1723298695"
-	  ],
-	  
-	  dare:[
-		"entry.1112402529",
-		"entry.314846700",
-		"entry.1505820067",
-		"entry.436614859"
-	  ],
-	  
-	  adapt:[
-		"entry.773360498",
-		"entry.63710511",
-		"entry.1270815412",
-		"entry.2063094220"
-	  ],
-	  
-	  excel:[
-		"entry.2109638102",
-		"entry.1790191347",
-		"entry.1253226378",
-		"entry.1248878201"
-	  ]
   };
  // https://docs.google.com/forms/d/e/1FAIpQLSeqprEkjYE1oS5Wpi_sNvtZOD_tc1J-yPEZRjp3w411le5r2Q/viewform?usp=sf_link
   //https://docs.google.com/forms/d/e/1FAIpQLScbzFTN7q93MLpTeN3aPizpSlvyvGCJjvnKMxcT_R9I7gaPxw/viewform?usp=sf_link
@@ -347,13 +285,6 @@ $(function(){
 
       for(var i=1; i<8; i++){
         form.append('<input type="text" name="' + formEntries.divisi[i] + '" value="' + $('#jabatan').val() + '">');
-      }
-      for (var i = 1; i<=4; ++i){
-        form.append('<input type="text" name="' + formEntries.dare[i-1] + '" value="' + $('#d_'+i).val() + '">');
-        form.append('<input type="text" name="' + formEntries.communication[i-1] + '" value="' + $('#c_'+i).val() + '">');
-        form.append('<input type="text" name="' + formEntries.adapt[i-1] + '" value="' + $('#a_'+i).val() + '">');
-        form.append('<input type="text" name="' + formEntries.manage[i-1] + '" value="' + $('#m_'+i).val() + '">');
-        form.append('<input type="text" name="' + formEntries.excel[i-1] + '" value="' + $('#e_'+i).val() + '">');
       }
       console.log("4");
 
